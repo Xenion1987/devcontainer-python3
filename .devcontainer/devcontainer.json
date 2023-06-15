@@ -1,0 +1,43 @@
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"runArgs": [
+		"--name=dev-py3",
+		"--hostname=dev-py3"
+	],
+	"initializeCommand": "docker volume inspect devcontainer-history > /dev/null 2>&1 || docker volume create devcontainer-history",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"telemetry.telemetryLevel": "off",
+				"files.eol": "\n",
+				"files.insertFinalNewline": true,
+				"files.autoSave": "off",
+				"editor.formatOnSave": true,
+				"git.autorefresh": true,
+				"git.autofetch": true,
+				"git.autofetchPeriod": 90,
+				"git.pullTags": false,
+				"git.confirmSync": false,
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"python.formatting.provider": "black"
+			},
+			"extensions": [
+				"sleistner.vscode-fileutils",
+				"ms-python.python",
+				"ms-python.pylint",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+	"onCreateCommand": ". ./.devcontainer/on-create-command.sh",
+	"mounts": [
+		{
+			"source": "devcontainer-history",
+			"target": "/home/vscode/.history_export",
+			"type": "volume"
+		}
+	],
+	"postCreateCommand": ". ./.devcontainer/post-create-command.sh"
+}
