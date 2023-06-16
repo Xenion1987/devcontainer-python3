@@ -3,7 +3,7 @@
 function install_pip_requirements() {
   pip3 -qq install --upgrade --user -r .devcontainer/requirements.txt
 }
-function pre_commit_autoupdate() {
+function pre_commit() {
   pre-commit install
   pre-commit autoupdate
 }
@@ -31,8 +31,12 @@ function create_code_workspace() {
 
 function main() {
   install_pip_requirements
-  pre_commit_autoupdate
-  create_code_workspace
+  pre_commit
+  
+  ## OPTIONAL: If you have mounted your local workspace,
+  ## this function creates a vscode workspace file for each
+  ## directory in your workspace directory
+  # create_code_workspace
 }
 
 main "${@}"
