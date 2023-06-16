@@ -37,13 +37,13 @@
 			"source": "devcontainer-history",
 			"target": "/home/vscode/.history_export",
 			"type": "volume"
-		},
-		// OPTIONAL: Mount your local workspace directory into the devcontainer
-		{
-			"source": "${localEnv:HOME}${localEnv:USERPROFILE}/workspace",
-			"target": "/home/vscode/workspace",
-			"type": "bind"
 		}
+		// OPTIONAL: Mount your local workspace directory into the devcontainer
+		// {
+		// 	"source": "${localEnv:HOME}${localEnv:USERPROFILE}/workspace",
+		// 	"target": "/home/vscode/workspace",
+		// 	"type": "bind"
+		// }
 	],
 	"postCreateCommand": "bash ./.devcontainer/post-create-command.sh"
 }
