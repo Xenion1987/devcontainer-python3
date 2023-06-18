@@ -21,7 +21,12 @@
 				"git.confirmSync": false,
 				"python.linting.enabled": true,
 				"python.linting.pylintEnabled": true,
-				"python.formatting.provider": "black"
+				"python.formatting.provider": "black",
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				},
+				"notebook.formatOnSave.enabled": true,
+				"notebook.lineNumbers": "on"
 			},
 			"extensions": [
 				"sleistner.vscode-fileutils",
