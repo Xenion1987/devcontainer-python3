@@ -1,6 +1,6 @@
 # devcontainer-python3
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![GitHub forks](https://img.shields.io/github/forks/Xenion1987/devcontainer-python3?style=plastic)](https://github.com/Xenion1987/devcontainer-python3/network) [![GitHub stars](https://img.shields.io/github/stars/Xenion1987/devcontainer-python3?style=plastic)](https://github.com/Xenion1987/devcontainer-python3/stargazers) ![Last Commit](https://img.shields.io/github/last-commit/Xenion1987/devcontainer-python3) ![Open Issues](https://img.shields.io/github/issues/Xenion1987/devcontainer-python3?color=important) ![Open Pull Requests](https://img.shields.io/github/issues-pr/Xenion1987/devcontainer-python3?color=yellowgreen)
 
 ## What is a Dev-Container?
 
