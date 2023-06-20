@@ -1,5 +1,9 @@
+# Basic requirements
 pip
 pylint
 black
-black[jupyter]
 pre-commit
+# Used for Jupyter Notebooks
+black[jupyter]
+ipython
+ipykernel
