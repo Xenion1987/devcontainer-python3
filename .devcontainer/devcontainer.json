@@ -32,6 +32,7 @@
 				"sleistner.vscode-fileutils",
 				"ms-python.python",
 				"ms-python.pylint",
+				"ms-python.black-formatter",
 				"ms-toolsai.jupyter"
 			]
 		}
