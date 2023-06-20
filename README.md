@@ -9,6 +9,15 @@ In this case, I've defined a Dockerfile using an Debian11 OS and I've defined so
 
 ## Requirements
 
+- wsl2 (Windows only)
+- docker
+- git
+- vscode
+
+### Windows Subsystem for Linux (WSL2)
+
+Please refer [windows-install](./docs/windows-install.md) instructions
+
 ### Docker
 
 [Install Docker (Desktop)](https://docs.docker.com/get-docker/)
