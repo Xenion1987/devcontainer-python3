@@ -1,9 +1,0 @@
-# Basic requirements
-pip
-pylint
-black
-pre-commit
-# Used for Jupyter Notebooks
-black[jupyter]
-ipython
-ipykernel

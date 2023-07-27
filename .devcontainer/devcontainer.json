@@ -1,11 +1,27 @@
 {
 	"name": "Python 3",
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
 	"runArgs": [
 		"--name=dev-py3",
 		"--hostname=dev-py3"
 	],
-	"initializeCommand": "bash ./.devcontainer/initialize-command.sh",
+	"initializeCommand": "bash ./.devcontainer/scripts/initialize-command.sh",
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:/home/vscode/.local/bin"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		}
+	},
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -37,7 +53,8 @@
 			]
 		}
 	},
-	"onCreateCommand": "bash ./.devcontainer/on-create-command.sh",
+	"remoteUser": "vscode",
+	"onCreateCommand": "bash ./.devcontainer/scripts/on-create-command.sh",
 	"mounts": [
 		{
 			"source": "devcontainer-history",
@@ -51,5 +68,5 @@
 		// 	"type": "bind"
 		// }
 	],
-	"postCreateCommand": "bash ./.devcontainer/post-create-command.sh"
+	"postCreateCommand": "bash ./.devcontainer/scripts/post-create-command.sh"
 }
